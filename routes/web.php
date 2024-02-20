@@ -16,3 +16,4 @@ use App\Http\Controllers\HomeController;
 Route::get('/', [HomeController::class, 'home'])->name('home');
 Route::get('/room', [HomeController::class, 'room'])->name('room');
 Route::get('/news', [HomeController::class, 'news'])->name('news');
+Route::get('/room-detail', [HomeController::class, 'room_detail'])->name('room_detail');

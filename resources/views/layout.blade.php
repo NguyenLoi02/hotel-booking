@@ -10,7 +10,7 @@
 
     <link rel="stylesheet" href="{{ asset('fontend/css/open-iconic-bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('fontend/css/animate.css') }}">
-    
+    <link rel="stylesheet" href="{{ asset('fontend/fonts/fontawesome-free-6.5.1-web/css/all.min.css') }}">
     <link rel="stylesheet" href="{{ asset('fontend/css/owl.carousel.min.css') }}">
     <link rel="stylesheet" href="{{ asset('fontend/css/owl.theme.default.min.css') }}">
     <link rel="stylesheet" href="{{ asset('fontend/css/magnific-popup.css') }}">
@@ -26,18 +26,28 @@
     <link rel="stylesheet" href="{{ asset('fontend/css/flaticon.css') }}">
     <link rel="stylesheet" href="{{ asset('fontend/css/icomoon.css') }}">
     <link rel="stylesheet" href="{{ asset('fontend/css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('fontend/css/style1.css') }}">
   </head>
   <body>
+    
+      
+      
+    
 
-    {{-- header --}}
-    @include('header')
+    <div class="main">
+        {{-- header --}}
+      @include('header')
 
-    {{-- boddy --}}
-    @yield('content')
+      {{-- boddy --}}
+      @yield('content')
 
 
-    {{-- footer --}}
-    @include('footer')
+      {{-- footer --}}
+      @include('footer')
+    </div>
+    
+
+  <script src="{{ asset('fontend/js/modal.js') }}"></script>
   <script src="{{ asset('fontend/js/jquery.min.js') }}"></script>
   <script src="{{ asset('fontend/js/jquery-migrate-3.0.1.min.js') }}"></script>
   <script src="{{ asset('fontend/js/popper.min.js') }}"></script>
