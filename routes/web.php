@@ -2,6 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\CustomerController;
+use App\Http\Controllers\RoomController;
+use App\Http\Controllers\NewsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,6 +17,14 @@ use App\Http\Controllers\HomeController;
 |
 */
 Route::get('/', [HomeController::class, 'home'])->name('home');
-Route::get('/room', [HomeController::class, 'room'])->name('room');
-Route::get('/news', [HomeController::class, 'news'])->name('news');
-Route::get('/room-detail', [HomeController::class, 'room_detail'])->name('room_detail');
+Route::get('/room', [RoomController::class, 'room'])->name('room');
+Route::get('/news', [NewsController::class, 'news'])->name('news');
+Route::get('/room-detail', [RoomController::class, 'room_detail'])->name('room_detail');
+
+//login
+Route::get('/login', [CustomerController::class, 'login'])->name('login');
+Route::post('/post-login', [CustomerController::class, 'postLogin'])->name('postLogin');
+//register
+Route::get('/register', [CustomerController::class, 'register'])->name('register');
+Route::post('/post-register', [CustomerController::class, 'postRegister'])->name('postRegister');
+

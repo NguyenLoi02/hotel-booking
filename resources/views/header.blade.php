@@ -12,7 +12,8 @@
           <li class="nav-item active"><a href="{{route('room')}}" class="nav-link">Phòng</a></li>
           <li class="nav-item"><a href="restaurant.html" class="nav-link">Nhà hàng</a></li>
           <li class="nav-item"><a href="{{route('news')}}" class="nav-link">Tin tức</a></li>
-          <li class="nav-item"><a href="contact.html" class="nav-link">Liên hệ</a></li>
+          <li class="nav-item"><a href="contact.html" class="nav-link ">Liên hệ</a></li>
+          <li class="nav-item dang-nhap"><a href="{{route('login')}}" class="nav-link">đăng nhập</a></li>
         </ul>
       </div>
     </div>

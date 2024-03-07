@@ -5,8 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
-    <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i" rel="stylesheet">
+   
 
     <link rel="stylesheet" href="{{ asset('fontend/css/open-iconic-bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('fontend/css/animate.css') }}">
@@ -26,6 +25,7 @@
     <link rel="stylesheet" href="{{ asset('fontend/css/flaticon.css') }}">
     <link rel="stylesheet" href="{{ asset('fontend/css/icomoon.css') }}">
     <link rel="stylesheet" href="{{ asset('fontend/css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('fontend/css/style1.css') }}">
   </head>
   <body>
 
@@ -43,6 +43,7 @@
 	          <li class="nav-item"><a href="restaurant.html" class="nav-link">Nhà hàng</a></li>
 	          <li class="nav-item"><a href="{{route('news')}}" class="nav-link">Tin tức</a></li>
 	          <li class="nav-item"><a href="contact.html" class="nav-link">Liên Hệ</a></li>
+			  <li class="nav-item dang-nhap"><a href="{{route('login')}}" class="nav-link">đăng nhập</a></li>
 	        </ul>
 	      </div>
 	    </div>
@@ -165,8 +166,8 @@
 				<div class="col-md-7 py-5 wrap-about pb-md-5 ftco-animate">
 		  <div class="heading-section heading-section-wo-line pt-md-5 pl-md-5 mb-5">
 			  <div class="ml-md-0">
-				  <span class="subheading">Welcome to Deluxe Hotel</span>
-				<h2 class="mb-4">Welcome To Our Hotel</h2>
+				  
+				<h2 class="mb-4">Xin chào đến với khách sạn</h2>
 			</div>
 		  </div>
 		  <div class="pb-md-5">
@@ -191,99 +192,27 @@
           <div class="col-md-7 heading-section text-center ftco-animate">
             <h2 class="mb-4">Phòng của chúng tôi</h2>
           </div>
-        </div>    		
+        </div>    
+		
     		<div class="row">
+				@foreach ($room_list as $item)		
     			<div class="col-sm col-md-6 col-lg-4 ftco-animate">
     				<div class="room">
-    					<a href="rooms.html" class="img d-flex justify-content-center align-items-center" style="background-image: url(fontend/images/room-1.jpg);">
+    					<a href="{{route('room_detail')}}" class="img d-flex justify-content-center align-items-center" style="background-image: url(fontend/images/{{$item->image}});">
     						<div class="icon d-flex justify-content-center align-items-center">
-    							<span class="icon-search2"></span>
     						</div>
     					</a>
     					<div class="text p-3 text-center">
-    						<h3 class="mb-3"><a href="rooms.html">Suite Room</a></h3>
-    						<p><span class="price mr-2">$120.00</span> <span class="per">per night</span></p>
+    						<h3 class="mb-3"><a href="rooms.html">{{ $item->name }}</a></h3>
+    						<p><span class="price mr-2">{{ $item->price }} đ</span></p>
     						<hr>
     						<p class="pt-1"><a href="room-single.html" class="btn-custom">View Room Details <span class="icon-long-arrow-right"></span></a></p>
     					</div>
     				</div>
     			</div>
-    			<div class="col-sm col-md-6 col-lg-4 ftco-animate">
-    				<div class="room">
-    					<a href="rooms.html" class="img d-flex justify-content-center align-items-center" style="background-image: url(fontend/images/room-2.jpg);">
-    						<div class="icon d-flex justify-content-center align-items-center">
-    							<span class="icon-search2"></span>
-    						</div>
-    					</a>
-    					<div class="text p-3 text-center">
-    						<h3 class="mb-3"><a href="rooms.html">Family Room</a></h3>
-    						<p><span class="price mr-2">$20.00</span> <span class="per">per night</span></p>
-    						<hr>
-    						<p class="pt-1"><a href="room-single.html" class="btn-custom">View Room Details <span class="icon-long-arrow-right"></span></a></p>
-    					</div>
-    				</div>
-    			</div>
-    			<div class="col-sm col-md-6 col-lg-4 ftco-animate">
-    				<div class="room">
-    					<a href="rooms.html" class="img d-flex justify-content-center align-items-center" style="background-image: url(fontend/images/room-3.jpg);">
-    						<div class="icon d-flex justify-content-center align-items-center">
-    							<span class="icon-search2"></span>
-    						</div>
-    					</a>
-    					<div class="text p-3 text-center">
-    						<h3 class="mb-3"><a href="rooms.html">Deluxe Room</a></h3>
-    						<p><span class="price mr-2">$150.00</span> <span class="per">per night</span></p>
-    						<hr>
-    						<p class="pt-1"><a href="room-single.html" class="btn-custom">View Room Details <span class="icon-long-arrow-right"></span></a></p>
-    					</div>
-    				</div>
-    			</div>
-    			<div class="col-sm col-md-6 col-lg-4 ftco-animate">
-    				<div class="room">
-    					<a href="rooms.html" class="img d-flex justify-content-center align-items-center" style="background-image: url(fontend/images/room-4.jpg);">
-    						<div class="icon d-flex justify-content-center align-items-center">
-    							<span class="icon-search2"></span>
-    						</div>
-    					</a>
-    					<div class="text p-3 text-center">
-    						<h3 class="mb-3"><a href="rooms.html">Classic Room</a></h3>
-    						<p><span class="price mr-2">$130.00</span> <span class="per">per night</span></p>
-    						<hr>
-    						<p class="pt-1"><a href="room-single.html" class="btn-custom">View Room Details <span class="icon-long-arrow-right"></span></a></p>
-    					</div>
-    				</div>
-    			</div>
-    			<div class="col-sm col-md-6 col-lg-4 ftco-animate">
-    				<div class="room">
-    					<a href="rooms.html" class="img d-flex justify-content-center align-items-center" style="background-image: url(fontend/images/room-5.jpg);">
-    						<div class="icon d-flex justify-content-center align-items-center">
-    							<span class="icon-search2"></span>
-    						</div>
-    					</a>
-    					<div class="text p-3 text-center">
-    						<h3 class="mb-3"><a href="rooms.html">Superior Room</a></h3>
-    						<p><span class="price mr-2">$300.00</span> <span class="per">per night</span></p>
-    						<hr>
-    						<p class="pt-1"><a href="room-single.html" class="btn-custom">View Room Details <span class="icon-long-arrow-right"></span></a></p>
-    					</div>
-    				</div>
-    			</div>
-    			<div class="col-sm col-md-6 col-lg-4 ftco-animate">
-    				<div class="room">
-    					<a href="rooms.html" class="img d-flex justify-content-center align-items-center" style="background-image: url(fontend/images/room-6.jpg);">
-    						<div class="icon d-flex justify-content-center align-items-center">
-    							<span class="icon-search2"></span>
-    						</div>
-    					</a>
-    					<div class="text p-3 text-center">
-    						<h3 class="mb-3"><a href="rooms.html">Luxury Room</a></h3>
-    						<p><span class="price mr-2">$500.00</span> <span class="per">per night</span></p>
-    						<hr>
-    						<p class="pt-1"><a href="room-single.html" class="btn-custom">View Room Details <span class="icon-long-arrow-right"></span></a></p>
-    					</div>
-    				</div>
-    			</div>
+				@endforeach
     		</div>
+
     	</div>
     </section>
 

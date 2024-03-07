@@ -148,9 +148,10 @@
 	</div>
 	<div class="detail">
 		<div class="detail-room">
-			<div class="detail-room-close">
-				<i class="fa-solid fa-xmark"></i>
-			</div>
+			<a class="detail-room_close" href="{{route('room')}}">
+					<i class="fa-solid fa-xmark "></i>
+			</a>
+			
 			<div class="detail-room-home">
 				<div class="detail-room-home_img">
 					<img class="img" src="{{ asset('fontend/images/room-4.jpg')}}" alt="">

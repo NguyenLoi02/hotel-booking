@@ -1,3 +1,4 @@
+/* trang chi tiết phòng */
 .detail {
     position: fixed;
     top: 0;
@@ -25,14 +26,17 @@
 .detail-room-home{
     padding: 41px 23px 10px;
 }
-.detail-room-close{
+.detail-room_close i {
+    font-size: 40px;
     position: absolute;
-    right: 0;
     top: 0;
-    padding: 0px 8px;
+    right: 0;
+    margin-right: 5px;
     cursor: pointer;
-}.detail-room-close:hover{
-    color: rgb(73, 70, 70);
+}
+
+.detail-room_close i:hover{
+    color: rgb(71, 41, 41);
 }
 .detail-room-close i{
     font-size: 40px;
@@ -67,3 +71,53 @@
     padding: 0 8px;
 
 }
+/* nút đăng nhập trang chủ */
+.dang-nhap{
+    background-color: #ffffff;
+    border-radius: 63px;
+    opacity: 0.7;
+    padding: 0 6px;
+    margin-left: 30px;
+}
+.dang-nhap:hover{
+    opacity: 1;
+}
+.dang-nhap a{
+    color: #000000 !important;
+    text-transform: uppercase;
+}
+
+/* form đăng nhập */
+.login{
+    display: flex;
+    min-height: 100vh;
+}
+.login .img{
+    flex: 2;
+}
+.login img{
+    height: 100%;
+    width: 100%;
+}
+.login .form{
+    flex: 1;
+    display: grid;
+    margin: auto;
+}
+.limiter-icon i{
+    position: absolute;
+    font-size: 38px;
+    right: 0px;
+    top: 0px;
+    padding: 14px 25px;
+    cursor: pointer;
+}
+.limiter-icon a:hover{
+    opacity: 0.7;
+}
+.sign-up a{
+    color: #2f1cb9;
+}.sign-up a:hover{
+    opacity: 0.5;
+}
+

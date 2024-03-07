@@ -8,8 +8,7 @@
 					@foreach ($room_list as $item)
 						<div class="col-sm col-md-6 col-lg-4 ftco-animate">
 							<div class="room">
-								<a href="{{route('room_detail')}}" class="img d-flex justify-content-center align-items-center" style="background-image: url(fontend/images/{{$item->image}});">
-									
+								<a href="{{route('room_detail')}}" class="img d-flex justify-content-center align-items-center" style="background-image: url(fontend/images/{{$item->image}});">							
 								</a>
 								<div class="text p-3 text-center">
 									<h3 class="mb-3"><a href="rooms-single.html">{{ $item->name }}</a></h3>
@@ -43,22 +42,22 @@
 				  <form action="#">
 					  <div class="fields">
 				  <div class="form-group">
-					<input type="text" id="checkin_date" class="form-control checkin_date" placeholder="Check In Date">
+					<input type="text" id="checkin_date" class="form-control checkin_date" placeholder="Ngày đến">
 				  </div>
 				  <div class="form-group">
-					<input type="text" id="checkin_date" class="form-control checkout_date" placeholder="Check Out Date">
+					<input type="text" id="checkin_date" class="form-control checkout_date" placeholder="Ngày đi">
 				  </div>
 				  <div class="form-group">
 					<div class="select-wrap one-third">
 					<div class="icon"><span class="ion-ios-arrow-down"></span></div>
 					<select name="" id="" class="form-control">
-						<option value="">Room Type</option>
+						<option value="">Loại phòng</option>
 						<option value="">Suite</option>
-					  <option value="">Family Room</option>
-					  <option value="">Deluxe Room</option>
-					  <option value="">Classic Room</option>
-					  <option value="">Superior Room</option>
-					  <option value="">Luxury Room</option>
+					  	<option value="">Family Room</option>
+					  	<option value="">Deluxe Room</option>
+					  	<option value="">Classic Room</option>
+					  	<option	option value="">Superior Room</option>
+					  	<option value="">Luxury Room</option>
 					</select>
 				  </div>
 				  </div>
@@ -66,13 +65,13 @@
 					<div class="select-wrap one-third">
 					<div class="icon"><span class="ion-ios-arrow-down"></span></div>
 					<select name="" id="" class="form-control">
-						<option value="">0 Adult</option>
-						<option value="">1 Adult</option>
-					  <option value="">2 Adult</option>
-					  <option value="">3 Adult</option>
-					  <option value="">4 Adult</option>
-					  <option value="">5 Adult</option>
-					  <option value="">6 Adult</option>
+						<option value="">0 người lớn</option>
+						<option value="">1 Người lớn</option>
+					  <option value="">2 Người lớn</option>
+					  <option value="">3 Người lớn</option>
+					  <option value="">4 Người lớn</option>
+					  <option value="">5 Người lớn</option>
+					  <option value="">6 Người lớn</option>
 					</select>
 				  </div>
 				  </div>
@@ -80,13 +79,13 @@
 					<div class="select-wrap one-third">
 					<div class="icon"><span class="ion-ios-arrow-down"></span></div>
 					<select name="" id="" class="form-control">
-						<option value="">0 Children</option>
-						<option value="">1 Children</option>
-					  <option value="">2 Children</option>
-					  <option value="">3 Children</option>
-					  <option value="">4 Children</option>
-					  <option value="">5 Children</option>
-					  <option value="">6 Children</option>
+						<option value="">0 Trẻ em</option>
+						<option value="">1 Trẻ em</option>
+					  <option value="">2 Trẻ em</option>
+					  <option value="">3 Trẻ em</option>
+					  <option value="">4 Trẻ em</option>
+					  <option value="">5 Trẻ em</option>
+					  <option value="">6 Trẻ em</option>
 					</select>
 				  </div>
 				  </div>
@@ -102,13 +101,13 @@
 									</div>
 				  </div>
 				  <div class="form-group">
-					<input type="submit" value="Search" class="btn btn-primary py-3 px-5">
+					<input type="submit" value="Tìm kiếm" class="btn btn-primary py-3 px-5">
 				  </div>
 				</div>
 			</form>
 			  </div>
 			  <div class="sidebar-wrap bg-light ftco-animate">
-				  <h3 class="heading mb-4">Star Rating</h3>
+				  <h3 class="heading mb-4">Đánh giá</h3>
 				  <form method="post" class="star-rating">
 						  <div class="form-check">
 								<input type="checkbox" class="form-check-input" id="exampleCheck1">
