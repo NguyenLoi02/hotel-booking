@@ -16,10 +16,16 @@ use App\Http\Controllers\NewsController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+//room
 Route::get('/', [HomeController::class, 'home'])->name('home');
 Route::get('/room', [RoomController::class, 'room'])->name('room');
-Route::get('/news', [NewsController::class, 'news'])->name('news');
 Route::get('/room-detail', [RoomController::class, 'room_detail'])->name('room_detail');
+Route::post('/searchRoom', [RoomController::class, 'searchRoom'])->name('searchRoom');
+
+
+//news
+Route::get('/news', [NewsController::class, 'news'])->name('news');
+
 
 //login
 Route::get('/login', [CustomerController::class, 'login'])->name('login');
@@ -27,4 +33,6 @@ Route::post('/post-login', [CustomerController::class, 'postLogin'])->name('post
 //register
 Route::get('/register', [CustomerController::class, 'register'])->name('register');
 Route::post('/post-register', [CustomerController::class, 'postRegister'])->name('postRegister');
+
+
 

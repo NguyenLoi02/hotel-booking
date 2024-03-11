@@ -27,6 +27,8 @@
     <link rel="stylesheet" href="{{ asset('fontend/css/icomoon.css') }}">
     <link rel="stylesheet" href="{{ asset('fontend/css/style.css') }}">
     <link rel="stylesheet" href="{{ asset('fontend/css/style1.css') }}">
+    <script src="{{ asset('fontend/js/jquery-3.7.1.js') }}"></script>
+
   </head>
   <body>
     

@@ -13,4 +13,5 @@ class NewsController extends Controller
         $news_list = DB::table("news")->Paginate(8);
         return view('news.news_page',compact('news_list'));
     }
+    
 }
