@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\Admin\AdminHomeController;
+use App\Http\Controllers\Admin\AdminBookingRoomController;
 use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\RoomController;
 use App\Http\Controllers\NewsController;
@@ -16,11 +18,34 @@ use App\Http\Controllers\NewsController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-//room
+//========================================================================================================================
+//admin routes
+Route::get('/admin', [AdminHomeController::class, 'adminHome'])->name('home');
+
+//admin bookings routes
+Route::get('/admin-booking-room', [AdminBookingRoomController::class, 'adminBookingRoom'])->name('admin_booking_room');
+Route::get('/admin-booked-room', [AdminBookingRoomController::class, 'adminBookedRoom'])->name('admin_booked_room');
+
+
+
+
+
+
+
+
+
+
+
+
+// =======================================================================================================================
+//client routes
+
 Route::get('/', [HomeController::class, 'home'])->name('home');
+
+//room
 Route::get('/room', [RoomController::class, 'room'])->name('room');
-Route::get('/room-detail', [RoomController::class, 'room_detail'])->name('room_detail');
-Route::post('/searchRoom', [RoomController::class, 'searchRoom'])->name('searchRoom');
+Route::get('/room-detail', [RoomController::class, 'roomDetail'])->name('room_detail');
+Route::post('/search-room', [RoomController::class, 'searchRoom'])->name('search_room');
 
 
 //news

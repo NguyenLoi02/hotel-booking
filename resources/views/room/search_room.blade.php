@@ -1,4 +1,4 @@
-@foreach ($search_room_list as $item)	
+@foreach ($availableRooms as $item)	
 <div class="col-sm col-md-6 col-lg-4 ftco-animate fadeInUp ftco-animated" >
 	<div class="room" >
 		<a href="{{route('room_detail')}}" class="img d-flex justify-content-center align-items-center" style="background-image: url(fontend/images/{{$item->image}});">							

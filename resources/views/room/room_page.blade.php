@@ -155,38 +155,43 @@
 			$('#searchForm').submit(function(e) {
 				e.preventDefault();
 				var formData = $(this).serialize();
-				_html = " ";
 				$.ajax({
-					url: '{{ route("searchRoom") }}',
+					url: '{{ route("search_room") }}',
 					type: 'POST',
+					// dataType: 'json',
 					data: formData,
-					success: function(data) {
-						
-						$('#row-item').html(data);
+					success: function(response) {
+						$('#row-item').html(response);
 					}
-					
 				});
 			});
 		});
 	</script>
 	
+	
 
 </section>
 @endsection
-
-{{-- _html += '@foreach ($search_room_list as $item) ';
-						_html += '<div class="col-sm col-md-6 col-lg-4 ftco-animate">';
-						_html += '<div class="room"> ';
-						_html += '<a href="{{route('room_detail')}}" class="img d-flex justify-content-center align-items-center" style="background-image: url(fontend/images/{{$item->image}});"></a> ';
-						_html += '<div class="text p-3 text-center"> ';
-						_html += '<h3 class="mb-3"><a href="rooms-single.html">{{ $item->name }}</a></h3> ';
-						_html += '<p><span class="price mr-2">{{ $item->price }} đ</span> <span class="per">/ Ngày</span></p> ';
-						_html += '<ul class="list"> ';
-						_html += '<li><span>Số người:</span> 3 Persons</li> ';
-						_html += '<li><span>Diện tích:</span> {{ $item->area }} m2</li> ';
-						_html += '<li><span>View:</span> Sea View</li> ';
-						_html += '<li><span>Bed:</span> 1</li> ';
-						_html += '</ul><hr> ';
-						_html += '<p class="pt-1"><a href="room-single.html" class="btn-custom">Book Now <span class="icon-long-arrow-right"></span></a></p> ';
-						_html += '</div></div></div> ';
-						_html += '@endforeach '; --}}
+	{{-- xu ly khi tra ve chuoi json --}}
+	{{-- _html ='';
+	var availableRooms = response.available_rooms;
+	for (var roomId in availableRooms) {
+	if (availableRooms.hasOwnProperty(roomId)) { //kiểm tra xem thuộc tính roomId có tồn tại trong đối tượng availableRooms hay không
+	var item = availableRooms[roomId];
+	_html += '<div class="col-sm col-md-6 col-lg-4 ftco-animate">';
+	_html += '<div class="room">';
+	_html += '<a href="#" class="img d-flex justify-content-center align-items-center" style="background-image: url(fontend/images/' + item.image + ');"></a>'; // Thêm kiểm tra dữ liệu item.image
+	_html += '<div class="text p-3 text-center">';
+	_html += '<h3 class="mb-3"><a href="">' + item.name + '</a></h3>';
+	_html += '<p><span class="price mr-2">' + item.price + ' đ</span> <span class="per">/ Ngày</span></p>';
+	_html += '<ul class="list">';
+	_html += '<li><span>Số người:</span> 3 Persons</li>'; // Có thể bạn muốn thay đổi văn bản này
+	_html += '<li><span>Diện tích:</span> ' + item.area + ' m2</li>';
+	_html += '<li><span>View:</span> Sea View</li>';
+	_html += '<li><span>Bed:</span> 1</li>';
+	_html += '</ul><hr>';
+	_html += '<p class="pt-1"><a href="" class="btn-custom">Book Now <span class="icon-long-arrow-right"></span></a></p>';
+	_html += '</div></div></div>';
+	console.log(_html);
+		}
+	} --}}
